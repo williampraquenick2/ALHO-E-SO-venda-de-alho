@@ -1,3 +1,3 @@
 
-// Arquivo desativado para priorizar versão Vanilla JS ultra-estável.
+// Lógica movida integralmente para index.html para garantir compatibilidade e execução imediata.
 export {};

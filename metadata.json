@@ -1,0 +1,5 @@
+{
+  "name": "Alho e Só - Confirmação de Compra",
+  "description": "Página de confirmação de pagamento para clientes do Alho e Só, focada em registro de conversão no Meta Pixel.",
+  "requestFramePermissions": []
+}

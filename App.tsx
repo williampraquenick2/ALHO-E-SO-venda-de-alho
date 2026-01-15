@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import Logo from './components/Logo';
-import { trackPurchase } from './services/pixelService';
 
 const App: React.FC = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -10,12 +9,8 @@ const App: React.FC = () => {
   const handleConfirm = () => {
     setIsLoading(true);
     
-    // Pequeno atraso para feedback visual e garantir disparo do Pixel
+    // Pequeno atraso para feedback visual antes de mostrar a confirmação de sucesso
     setTimeout(() => {
-      // 1. Dispara o evento Purchase no Meta Pixel
-      trackPurchase();
-      
-      // 2. Altera o estado para mostrar sucesso
       setIsConfirmed(true);
       setIsLoading(false);
     }, 800);

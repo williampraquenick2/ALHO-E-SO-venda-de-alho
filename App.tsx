@@ -22,14 +22,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-3 sm:p-6">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <main className="w-full max-w-[340px] xs:max-w-sm sm:max-w-md">
-        <div className="bg-white rounded-[1.8rem] sm:rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.05)] border border-neutral-100 pt-3 pb-6 px-5 sm:pt-6 sm:pb-10 sm:px-10 text-center transition-all duration-500">
+        <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-neutral-100 pt-2 pb-6 px-5 sm:pt-4 sm:pb-10 sm:px-10 text-center transition-all duration-500 overflow-hidden">
           <Logo />
 
           {!isConfirmed ? (
-            <div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <header className="space-y-1 pt-2 border-t border-neutral-50">
+            <div className="space-y-5 sm:space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 mt-2">
+              <header className="space-y-1 pt-4 border-t border-neutral-50">
                 <h2 className="text-lg sm:text-2xl font-black text-neutral-900 uppercase tracking-tight">
                   CONFIRMAR PEDIDO
                 </h2>
@@ -48,7 +48,7 @@ const App: React.FC = () => {
                     transition-all duration-300 transform shadow-md active:scale-95
                     ${isLoading 
                       ? 'bg-neutral-300 cursor-not-allowed' 
-                      : 'bg-purple-700 hover:bg-purple-800 hover:shadow-xl hover:shadow-purple-200'}
+                      : 'bg-emerald-600 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-100'}
                   `}
                 >
                   {isLoading ? (
@@ -71,15 +71,15 @@ const App: React.FC = () => {
               </div>
             </div>
           ) : (
-            <div className="space-y-4 sm:space-y-6 animate-in zoom-in-95 duration-500 py-1">
+            <div className="space-y-5 sm:space-y-7 animate-in zoom-in-95 duration-500 py-2 mt-2">
               <div className="flex justify-center">
-                <div className="w-16 h-16 sm:w-24 sm:h-24 bg-purple-50 rounded-full flex items-center justify-center border-4 border-purple-100 shadow-inner">
+                <div className="w-16 h-16 sm:w-24 sm:h-24 bg-emerald-50 rounded-full flex items-center justify-center border-4 border-emerald-100 shadow-inner">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     className="w-8 h-8 sm:w-12 sm:h-12"
                     viewBox="0 0 24 24" 
                     fill="none" 
-                    stroke="#7e22ce" 
+                    stroke="#059669" 
                     strokeWidth="3" 
                     strokeLinecap="round" 
                     strokeLinejoin="round"
@@ -89,23 +89,25 @@ const App: React.FC = () => {
                 </div>
               </div>
               
-              <div className="space-y-2">
-                <h2 className="text-xl sm:text-3xl font-black text-purple-900 tracking-tight uppercase">
-                  TUDO PRONTO!
-                </h2>
-                <p className="text-neutral-700 text-sm sm:text-lg font-bold">
-                  Pedido liberado com sucesso.
-                </p>
-                <div className="bg-purple-50 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-purple-50 shadow-sm">
-                  <p className="text-purple-900 text-[12px] sm:text-sm font-medium leading-relaxed">
+              <div className="space-y-3">
+                <div className="space-y-1">
+                  <h2 className="text-xl sm:text-3xl font-black text-emerald-900 tracking-tight uppercase">
+                    TUDO PRONTO!
+                  </h2>
+                  <p className="text-emerald-700 text-sm sm:text-lg font-bold">
+                    Pedido liberado com sucesso.
+                  </p>
+                </div>
+                <div className="bg-emerald-50 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-emerald-100 shadow-sm">
+                  <p className="text-emerald-900 text-[12px] sm:text-sm font-medium leading-relaxed">
                     Seu pedido foi registrado. <br /> 
-                    <strong className="text-purple-700">William e Fernanda</strong> já estão preparando seu <strong>ALHO E SÓ!</strong> <br /> 
+                    <strong className="text-emerald-700">William e Fernanda</strong> já estão preparando seu <strong>ALHO E SÓ!</strong> <br /> 
                     E será entregue na data combinada no Whatsapp.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-1">
+              <div className="pt-2">
                 <div className="text-[9px] sm:text-xs text-neutral-300 font-bold italic uppercase tracking-tighter">
                   Você já pode fechar esta página.
                 </div>
